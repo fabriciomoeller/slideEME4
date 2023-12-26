@@ -89,6 +89,10 @@ Configurações globais que serão utilizadas por todos os módulos
 
  ---
  <br>
+
+ - Parâmetros Filiais Manufatura
+ - Calendário de produção
+ - Turnos de produção
 ---
 transition: slide-up
 level: 2
@@ -105,8 +109,8 @@ Configuração de produtos e suas variantes
 - Linha de produção
 - Recursos
 - Ferramentas
-- Lista de materiais
-- Roteiro de operações
+- Lista de materiais (BOM) Versionadas (Preferencia, Alternativa, opcional, Co-produto, Sub-Produto)
+- Roteiro de operações (Routing) Versionadas
 
 
 ---
@@ -119,10 +123,11 @@ Criação, controle e apontamento de ordens de produção
  ---
  <br>
 
-- Criação de ordem de produção
+- Criação de ordem de produção ( Empurrada e Puxada ) 
 - Consumo da engenharia de produtos e suas proporções
-- Apontamento de ordem de produção
-- Status de ordem de produção
+- Uma ordem para multiplos produtos saída (Co-produtos)
+- Ordens de produção Planejadas, Firmes, Em Andamento, Baixadas e Finalizadas
+- Apontamento de ordem de produção (Parcial e Total) - Opcionalmente com formulários Web
 - Rastreabilidade de ordem de produção
 
 <!--
@@ -217,13 +222,13 @@ clicks: 5
 <br>
   
   --- 
-<div class="flex gap-4 mt-5">
+<div class="flex gap-4 mt-5 font-mono">
  Estoque
 
 <div class="flex-auto"/>
   
  
-  <DialogBox v-click="[5,6]" class="flex-initial w-33 bg-gray-300 text-gray-900 ">
+  <DialogBox v-click="[5,6]" class="flex-initial w-33" bg="gray-700 dark:gray-300" text="gray-300 dark:gray-700">
     Finalizado
   </DialogBox>
 </div>
