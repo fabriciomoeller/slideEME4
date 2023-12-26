@@ -1,0 +1,22 @@
+{
+  "name": "slidev",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev --open",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/cli": "^0.46.1",
+    "@slidev/theme-default": "latest",
+    "@slidev/theme-seriph": "latest",
+    "h3": "^1.9.0"
+  },
+  "devDependencies": {
+    "@iconify-json/fluent": "^1.1.45",
+    "@iconify-json/ic": "^1.1.17",
+    "@iconify-json/mdi": "^1.1.63",
+    "@iconify-json/uim": "^1.1.9"
+  }
+}
