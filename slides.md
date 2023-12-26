@@ -48,6 +48,8 @@ transition: fade-out
 
 O manufatura 4.0 é composto por 4 módulos:
 
+ ---
+ <br>
 
 - **<carbon-settings/> Parâmetros Globais** - Configurações globais que serão utilizadas por todos os módulos
 - **<ic-baseline-engineering/> Engenharia de produtos** - Configuração de produtos e suas variantes 
@@ -85,7 +87,8 @@ layout: default
 
 Configurações globais que serão utilizadas por todos os módulos
 
-
+ ---
+ <br>
 ---
 transition: slide-up
 level: 2
@@ -95,12 +98,15 @@ level: 2
 
 Configuração de produtos e suas variantes
 
+ 
+  ---
+<br>
 
-### Linha de produção
-### Recursos
-### Ferramentas
-### Lista de materiais
-### Roteiro de operações
+- Linha de produção
+- Recursos
+- Ferramentas
+- Lista de materiais
+- Roteiro de operações
 
 
 ---
@@ -109,6 +115,15 @@ Configuração de produtos e suas variantes
 # <fluent-production-24-regular/> Controle de produção
 
 Criação, controle e apontamento de ordens de produção
+
+ ---
+ <br>
+
+- Criação de ordem de produção
+- Consumo da engenharia de produtos e suas proporções
+- Apontamento de ordem de produção
+- Status de ordem de produção
+- Rastreabilidade de ordem de produção
 
 <!--
 Fazendo as anotações do apresentador
@@ -119,6 +134,16 @@ Fazendo as anotações do apresentador
 # <fluent-production-checkmark-24-regular/> Controle de Formulários
 
 Controle de formulários para ordem de produção e controle de qualidade
+
+ ---
+ <br>
+
+- Criação de multiplos formulários a partir de uma ordem de produção
+- Criação de formulários manualmente 
+- Rastreabilidade de formulários pelas ordens de produção
+- Fila de inspeção para os formulários
+- Controle supervisionado de formulários
+- Apontamento de produção com formulários
 
 
 <!--
@@ -134,41 +159,57 @@ Also, HTML elements are valid:
 
 
 ---
+clicks: 5
+---
 
 # Diagramas
 
 
-<div class="grid grid-cols-6 gap-4 mt-10">
+<div class="flex gap-4 mt-10 font-mono justify-center">
   Ordem de Produção
-  <DialogBox v-click>
+  <DialogBox v-click class="flex-auto">
     Planejada
   </DialogBox>
 
-  <DialogBox v-click>
+  <DialogBox v-click class="flex-auto">
     Firme
   </DialogBox>
-  </div>
-  <br>
-  
-  --- 
-<div class="grid grid-cols-6 gap-4 mt-5">
- Apontamento de Produção
 
-  <div/>
-
-  <DialogBox v-after class="bg-gray-600">
-    Firme
-  </DialogBox>
- 
-  <DialogBox v-click class="bg-gray-600">
+  <DialogBox v-click class="flex-auto">
     Em Andamento
   </DialogBox>
 
-  <DialogBox v-click class="bg-gray-600">
+  <DialogBox v-click class="flex-auto">
     Baixado
   </DialogBox>
 
-  <DialogBox v-click class="bg-gray-600">
+  <DialogBox v-click class="flex-auto">
+    Finalizado
+  </DialogBox>
+</div>
+  
+  
+  <br>
+  
+  --- 
+<div class="flex gap-4 mt-5 font-mono">
+ Apontamento de Produção
+
+  <div class="flex-auto w-5"/>
+
+  <DialogBox v-click="[2,6]" class="flex-auto bg-gray-500">
+    Firme
+  </DialogBox>
+ 
+  <DialogBox v-click="[3,6]" class="flex-auto bg-gray-500">
+    Em Andamento
+  </DialogBox>
+
+  <DialogBox v-click="[4,6]" class="flex-auto bg-gray-500">
+    Baixado
+  </DialogBox>
+
+  <DialogBox v-click="[5,6]" class="flex-auto bg-gray-500">
     Finalizado
   </DialogBox>
 </div>
@@ -176,12 +217,13 @@ Also, HTML elements are valid:
 <br>
   
   --- 
-<div class="grid grid-cols-6 gap-4 mt-5">
+<div class="flex gap-4 mt-5">
  Estoque
 
-  <div/><div/><div/><div/>
+<div class="flex-auto"/>
+  
  
-  <DialogBox v-after class="bg-gray-300 text-gray-900">
+  <DialogBox v-click="[5,6]" class="flex-initial w-33 bg-gray-300 text-gray-900 ">
     Finalizado
   </DialogBox>
 </div>
@@ -194,6 +236,7 @@ Also, HTML elements are valid:
   .slidev-vclick-hidden {
     transform: scale(0);
   }
+
 </style>
 
 ---
@@ -257,7 +300,7 @@ preload: false
     />
     <img
       v-motion
-      :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }"
+      :initial="{ x: 500, y: 400, scale: 2, rotate: 100 }"
       :enter="final"
       class="absolute top-0 left-0 right-0 bottom-0"
       src="https://sli.dev/logo-triangle.png"
