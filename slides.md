@@ -120,6 +120,7 @@ Fazendo as anotações do apresentador
 
 Controle de formulários para ordem de produção e controle de qualidade
 
+
 <!--
 Presenter note with **bold**, *italic*, and ~~striked~~ text.
 
@@ -137,18 +138,66 @@ Also, HTML elements are valid:
 # Diagramas
 
 
-```mermaid {scale: 0.7}
-journey
-    title Fluxo de uma ordem de produção
-    section OP - Ordem de produção
-      Planejada: 10.5: 1 - OP
-      Firme: 10.5: 1 - OP
-    section AP - Apontamento
-      Em Andamento: 10.5: 1 - OP, 2 - AP
-      Baixada: 10.5: 1 - OP, 2 - AP
-      Finalizada: 10.5: 1 - OP, 2 - AP
-```
+<div class="grid grid-cols-6 gap-4 mt-10">
+  Ordem de Produção
+  <DialogBox v-click>
+    Planejada
+  </DialogBox>
+
+  <DialogBox v-click>
+    Firme
+  </DialogBox>
+  </div>
+  <br>
+  
+  --- 
+<div class="grid grid-cols-6 gap-4 mt-5">
+ Apontamento de Produção
+
+  <div/>
+
+  <DialogBox v-after class="bg-gray-600">
+    Firme
+  </DialogBox>
+ 
+  <DialogBox v-click class="bg-gray-600">
+    Em Andamento
+  </DialogBox>
+
+  <DialogBox v-click class="bg-gray-600">
+    Baixado
+  </DialogBox>
+
+  <DialogBox v-click class="bg-gray-600">
+    Finalizado
+  </DialogBox>
+</div>
+
+<br>
+  
+  --- 
+<div class="grid grid-cols-6 gap-4 mt-5">
+ Estoque
+
+  <div/><div/><div/><div/>
+ 
+  <DialogBox v-after class="bg-gray-300 text-gray-900">
+    Finalizado
+  </DialogBox>
+</div>
+
+<style>
+  .slidev-vclick-target {
+    transition: all 500ms ease;
+  }
+
+  .slidev-vclick-hidden {
+    transform: scale(0);
+  }
+</style>
+
 ---
+
 
 # Diagramas
 
@@ -175,14 +224,6 @@ journey
     @apply text-sm italic;
   }
 </style> 
-
----
-
-<div v-click>1</div>
-<div v-click>2</div>
-<div v-click>3</div>
-
-
 
 ---
 preload: false
