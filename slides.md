@@ -80,7 +80,7 @@ Here is another comment.
 -->
 
 ---
-layout: default
+layout: defaultEME4
 ---
 
 # <carbon-settings/> Parâmetros Globais
@@ -89,6 +89,7 @@ Configurações globais que serão utilizadas por todos os módulos
 
  ---
  <br>
+
 
  - Parâmetros Filiais Manufatura
  - Calendário de produção
@@ -249,29 +250,7 @@ clicks: 5
 
 # Diagramas
 
-<img src="fluxoOP.png" />
-
-<v-clicks>
-
-1. Criação de ordem de produção como Planejada
-2. Firma a ordem de produção para que seja possível apontar
-3. Inicia apontamento da ordem de produção muda status para Em Andamento
-4. Apontamento parcial da ordem de produção muda status para Baixada
-5. 100% apontamento da ordem de produção muda status para Finalizada
-
-</v-clicks>
-<br>
-
-> A ordem de produção só pode ser apontada se estiver no status Firme
-
-<style>
-  ol {
-    @apply text-sm;
-  }
-  blockquote {
-    @apply text-sm italic;
-  }
-</style> 
+<AutoFitText :max="200" :min="100" modelValue="Some text"/>
 
 ---
 preload: false
