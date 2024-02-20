@@ -19,7 +19,7 @@ mdc: true
 # Manufatura
 
 Uma visão para Industria <br>
-de Laticínios
+
 
 <div class="pt-12">
   <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
@@ -46,6 +46,7 @@ O manufatura EME4 é composto por 4 módulos:
 - **<ic-baseline-engineering/> Engenharia de produtos** - Configuração de produtos e suas variantes 
 - **<fluent-production-24-regular/> Controle de produção** - Criação, controle e apontamento de ordens de produção
 - **<fluent-production-checkmark-24-regular/> Controle de Formulários** - Desenvolvimento específico para  o Controle da Manufatura e Qualidade
+- **<fluent-notebook-add-24-regular/> Custos** - Desenvolvimento específico para  o Controle da Manufatura e Qualidade
 
 
 
@@ -69,6 +70,107 @@ h1 {
 <!--
 Here is another comment.
 -->
+---
+clicks: 2
+mdc: true
+---
+
+#  <ic-baseline-engineering/> Tipos de Produção e a necessidade de materiais
+
+Existem dois tipos de produção. A empurrada e a puxada ou o uso das duas de forma simultânea.
+
+<div v-click="1" class="bg-gray-100 p-2 dark:bg-gray-900 rounded-lg shadow-lg">
+
+<h3 class="border-b-1" mb-2 > Produção empurrada </h3>
+
+
+
+```mermaid {theme: 'neutral', scale: 0.5}
+graph LR
+
+classDef prod fill:#B0B0B0,font-weight:bold
+B[Entrada de mercadoria 
+Compras] --> C[Estoque de Materiais] --> D[Ordem de produção Planejada]
+-->E[Ordem de produção em execução] -->F[Estoque de produtos acabado]
+-->G[Venda]
+C2[Engenharia de Materiais] --> D[Ordem de produção Planejada]
+C2:::prod
+D:::prod
+E:::prod
+F:::prod
+```
+</div>
+
+<br>
+
+<div v-click="2" class="bg-gray-100 p-2 dark:bg-gray-900 rounded-lg shadow-lg">
+
+<h3 class="border-b-1" mb-2 > Produção puxada </h3>
+
+
+```mermaid {theme: 'neutral', scale: 0.45}
+graph LR
+
+classDef prod fill:#B0B0B0,font-weight:bold
+B[Pedidos de Venda] --> B2{Planejamento
+ das necessidade}
+B2 --> G[Venda]
+B2 -->  D[Ordem de produção Planejada]-->E[Ordem de produção
+ em execução] -->F[Estoque de produtos acabado]
+-->G1[Venda]
+B2 --> B3[Compras] --> C[Estoque de Materiais] --> D2[Ordem de produção Planejada]-->E2[Ordem de produção 
+em execução]
+-->F2[Estoque de 
+produtos acabado] -->G2[Venda]
+C2[Engenharia de Materiais] --> B3[Compras]
+C2[Engenharia de Materiais] --> D[Ordem de produção Planejada]
+C2[Engenharia de Materiais] --> D2[Ordem de produção Planejada]
+
+
+D:::prod
+E:::prod
+F:::prod
+C2:::prod
+D2:::prod
+E2:::prod
+F2:::prod
+
+```
+</div>
+
+
+---
+
+#  <ic-baseline-engineering/> A Engenharia e a Capacidade de Produção
+Linha de produção para o  Café Cappuccino ☕
+
+<div grid="~ cols-3 gap-2" m="-t-2">
+
+<img src="/misturador_cappucino.png" class="absolute h-60% top-35 left-5 p2 drop-shadow-2xl" />
+
+<div class="absolute h-55% top-30 left-79 p2 drop-shadow-2xl" >
+
+
+```mermaid {theme: 'neutral', scale: 0.55}
+timeline
+    
+    Misturador: Capacidade 300 kg em 20 minutos
+              : Setup 15 minutos
+              : Produz 16 Cargas dia 
+              : Capacidade total em um dia = ( 300 x 16 )  = 4.800 kg
+              : Tempo total em um dia = (15 minutos + ( 20 minutos x 16 )) = 335 minutos = 5,58 horas
+    Empacotador: Capacidade 600 kg em 60 minutos
+               : Setup 15 minutos
+               : Para empacotar os 4.800 kg de café, precisa de 8 horas
+
+```
+</div>
+
+<img src="/empacotadora_bosch.png" class="absolute h-60% top-35 right-5 p2 drop-shadow-2xl" />
+
+
+
+</div>
 
 ---
 
@@ -375,7 +477,7 @@ Observação: Na lista de material podem ser adicionados itens Alternativos, ger
 <style>
   .slidev-layout table {
     width: 100%;
-    font-size: small;
+    font-size: 8px;
   }
 
   tr:nth-child(even) {background-color: #f2f2f2;}
@@ -408,6 +510,56 @@ Usando a Unidades de Conversão entre almoxarifados
 - As unidades de converção servem para converter a unidade de um produto em outra, por exemplo, a unidade de venda de um produto pode ser em caixa ou em unidade.
 
 - Pode ter o queijo no almoxarifado de produção em kg e ao movimentar para o almoxarifado de venda é convertido em unidade ou em caixa.
+
+
+---
+clicks: 3
+mdc: true
+---
+
+# <fluent-production-checkmark-24-regular/> Formulários WEB
+Resolvendo apontamentos de produção e de controle de qualidade
+
+<img v-click href="https://eme4.com.br" src="/08_fila.png" class="absolute h-80% p2 drop-shadow-2xl" />
+
+<img v-click href="https://eme4.com.br" src="/08.png" class="absolute top-30 left-44 h-70% border b-gray-1  shadow-2xl" />
+
+<img v-click href="https://eme4.com.br" src="/08_detalhe.png" class="absolute top-35 left-75 h-70% border b-gray-1 shadow-2xl" />
+
+
+---
+
+# <fluent-notebook-add-24-regular/> Custos
+Calculo dos custos mensais de produção para produto acabado, semi acabado e recursos
+
+- Parametrização do módulo de Custos
+- Calculo dos custos mensais de produção para produto acabado, semi acabado e recursos
+  - Checagem dos parametros
+  - Calculo dos custos
+  - Atualização Estoques (Entradas/Estornos de Produção) e Custo médio mensal
+  - Atualização/Reintegração da Contabilidade
+
+---
+clicks: 4
+mdc: true
+---
+
+# <fluent-notebook-add-24-regular/> Custos 
+Uma Visão da apuração do custo mensal
+
+
+<img v-click="1" href="https://eme4.com.br" src="/custos.png" class="absolute h-80% p2 drop-shadow-2xl" />
+
+<img v-click="2" href="https://eme4.com.br" src="/custos_configuracao_custos.png" class="absolute top-30 left-44 h-70% p2 drop-shadow-2xl" />
+
+<img v-click="3" href="https://eme4.com.br" src="/custos_grupos_custeio.png" class="absolute top-35 left-75 h-70% p2 
+drop-shadow-2xl" />
+
+<img v-click="4" href="https://eme4.com.br" src="/calculo_custo_producao_mensal.png" class="absolute top-45 left-55 h-70% p2 
+drop-shadow-2xl" />
+
+
+
 ---
 preload: false
 layout: image
