@@ -175,6 +175,74 @@ timeline
 ---
 
 
+# A Manufatura do Queijo Minas Frescal
+Resolvendo a Lista de Material e Roteiro de Produção
+
+<div class="absolute top-5 right-25 ">
+
+![](/vitalatte_matinal_minas_frescal_tradicional.png){width=150px lazy}
+
+</div>
+
+
+<div class="grid grid-cols-3 gap-4 mt-10">
+  <div class="col-span-2">
+
+ | ITEM | QUANTIDADE PAI (EM LITROS) | QUANTIDADE FILHO |
+ | --- | --- | --- |
+ | Leite vaca in natura padrão | 10 | 100 litros |
+ | Sal ref extra cisne 25kg ind(vermelho) | 10 | 1.000 g |
+ | Cloreto de calcio | 10 | 300 ml |
+ | Fermento dvs tcc 20 500u congelado | 10 | 1.000 ml |
+ | Chy max extra bb 5 litros (coagulante) | 10 | 60 ml |
+ | Pote ( prt 530 ) - leve | 10 | 20 un |
+ | Pote vita 500g - minas frescal tradicional ( PRT 530 ) | 10 | 20 un |
+ | Tampa vita 500g - minas frescal trad (imp) (st 125) (st 130) | 10 | 20 un |
+ | Saco vita/eur 20 x 35 - minas frescal pote (bobina) (liso) | 10 | 20 un |
+ | Saco vita/eur 20 x 35 - minas frescal pote (bobina) (liso) | 10 | 20 un |
+ | Cx vita - nº 15 - 06 pt - 500g | 10 | 3 un |
+ | Fita adesiva 12mmx120m branca (embalar queijo) - 50 microns | 10 | 3 metros |
+
+</div> 
+
+<div class="col-span-1">
+
+|ROTEIRO DE PRODUÇÃO|TEMPO|
+|--|--|
+|Mistura Fermento Lácteo (DVS) | 30 minutos |
+|Mistura Cloreto de Calcio e Coagulação| 45 minutos |
+|Corte da Coalhada com a Lira| 10 minutos |
+|Mexedura| 20 minutos |
+|Salga| 10 minutos |
+|Formas de Minas Frescal | 60 minutos |
+|Embalagem| 15 minutos |
+</div>
+
+</div>
+
+Observação: Na lista de material podem ser adicionados itens Alternativos, geralmente substitutos para os itens da lista caso faltem.
+
+<style>
+  .slidev-layout table {
+    width: 100%;
+    font-size: 8px;
+  }
+
+  tr:nth-child(even) {background-color: #f2f2f2;}
+
+  .slidev-layout td, .slidev-layout th {
+      padding: 0.1rem;
+      font-size: 10px;
+      /*padding-top: 0.75rem;*/
+      /*padding-bottom: 0.75rem;*/
+  }
+
+</style>
+
+
+---
+
+
 # <carbon-settings/> Parâmetros Globais
 
 Configurações globais que serão utilizadas por todos os módulos
@@ -228,40 +296,11 @@ Fazendo as anotações do apresentador
 -->
 
 ---
-
-# <fluent-production-checkmark-24-regular/> Controle de Formulários
-
-Controle de formulários para ordem de produção e controle de qualidade
-
- ---
- <br>
-
-- Criação de multiplos formulários a partir de uma ordem de produção
-- Criação de formulários manualmente 
-- Rastreabilidade de formulários pelas ordens de produção
-- Fila de inspeção para os formulários
-- Controle supervisionado de formulários
-- Apontamento de produção com formulários
-
-
-<!--
-Presenter note with **bold**, *italic*, and ~~striked~~ text.
-
-Also, HTML elements are valid:
-<div class="flex w-full">
-  <span style="flex-grow: 1;">Left content</span>
-  <span>Right content</span>
-</div>
--->
-
-
-
----
 clicks: 6
 mdc: true
 ---
 
-# Diagramas
+# Diagrama da Ordem de Produção
 Situações da Ordem de produção por etapas
 
 <div >
@@ -424,92 +463,37 @@ Situações da Ordem de produção por etapas
 
 </style>
 
----
-
-
-# A Manufatura do Queijo Minas Frescal
-Resolvendo a Lista de Material e Roteiro de Produção
-
-<div class="absolute top-5 right-25 ">
-
-![](/vitalatte_matinal_minas_frescal_tradicional.png){width=150px lazy}
-
-</div>
-
-
-<div class="grid grid-cols-3 gap-4 mt-10">
-  <div class="col-span-2">
-
- | ITEM | QUANTIDADE PAI (EM LITROS) | QUANTIDADE FILHO |
- | --- | --- | --- |
- | Leite vaca in natura padrão | 10 | 100 litros |
- | Sal ref extra cisne 25kg ind(vermelho) | 10 | 1.000 g |
- | Cloreto de calcio | 10 | 300 ml |
- | Fermento dvs tcc 20 500u congelado | 10 | 1.000 ml |
- | Chy max extra bb 5 litros (coagulante) | 10 | 60 ml |
- | Pote ( prt 530 ) - leve | 10 | 20 un |
- | Pote vita 500g - minas frescal tradicional ( PRT 530 ) | 10 | 20 un |
- | Tampa vita 500g - minas frescal trad (imp) (st 125) (st 130) | 10 | 20 un |
- | Saco vita/eur 20 x 35 - minas frescal pote (bobina) (liso) | 10 | 20 un |
- | Saco vita/eur 20 x 35 - minas frescal pote (bobina) (liso) | 10 | 20 un |
- | Cx vita - nº 15 - 06 pt - 500g | 10 | 3 un |
- | Fita adesiva 12mmx120m branca (embalar queijo) - 50 microns | 10 | 3 metros |
-
-</div> 
-
-<div class="col-span-1">
-
-|ROTEIRO DE PRODUÇÃO|TEMPO|
-|--|--|
-|Mistura Fermento Lácteo (DVS) | 30 minutos |
-|Mistura Cloreto de Calcio e Coagulação| 45 minutos |
-|Corte da Coalhada com a Lira| 10 minutos |
-|Mexedura| 20 minutos |
-|Salga| 10 minutos |
-|Formas de Minas Frescal | 60 minutos |
-|Embalagem| 15 minutos |
-</div>
-
-</div>
-
-Observação: Na lista de material podem ser adicionados itens Alternativos, geralmente substitutos para os itens da lista caso faltem.
-
-<style>
-  .slidev-layout table {
-    width: 100%;
-    font-size: 8px;
-  }
-
-  tr:nth-child(even) {background-color: #f2f2f2;}
-
-  .slidev-layout td, .slidev-layout th {
-      padding: 0.1rem;
-      font-size: 10px;
-      /*padding-top: 0.75rem;*/
-      /*padding-bottom: 0.75rem;*/
-  }
-
-</style>
 
 
 ---
 
+# <fluent-production-checkmark-24-regular/> Controle de Formulários
 
-# A Manufatura do Queijo Minas Frescal
-Resolvendo a venda em caixa ou unidade
+Controle de formulários para ordem de produção e controle de qualidade
 
-<div class="absolute top-5 right-25 ">
+ ---
+ <br>
 
-![](/vitalatte_matinal_minas_frescal_tradicional.png){width=150px lazy}
+- Criação de multiplos formulários a partir de uma ordem de produção
+- Criação de formulários manualmente 
+- Rastreabilidade de formulários pelas ordens de produção
+- Fila de inspeção para os formulários
+- Controle supervisionado de formulários
+- Apontamento de produção com formulários
 
+
+<!--
+Presenter note with **bold**, *italic*, and ~~striked~~ text.
+
+Also, HTML elements are valid:
+<div class="flex w-full">
+  <span style="flex-grow: 1;">Left content</span>
+  <span>Right content</span>
 </div>
+-->
 
 
-Usando a Unidades de Conversão entre almoxarifados
 
-- As unidades de converção servem para converter a unidade de um produto em outra, por exemplo, a unidade de venda de um produto pode ser em caixa ou em unidade.
-
-- Pode ter o queijo no almoxarifado de produção em kg e ao movimentar para o almoxarifado de venda é convertido em unidade ou em caixa.
 
 
 ---
