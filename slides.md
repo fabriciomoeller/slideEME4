@@ -175,12 +175,12 @@ timeline
 ---
 
 
-# A Manufatura do Queijo Minas Frescal
+# A Manufatura metal mecânica
 Resolvendo a Lista de Material e Roteiro de Produção
 
 <div class="absolute top-5 right-25 ">
 
-![](/vitalatte_matinal_minas_frescal_tradicional.png){width=150px lazy}
+![](/sulbras/revestimento-poliuretano.png){width=100px lazy}
 
 </div>
 
@@ -190,18 +190,10 @@ Resolvendo a Lista de Material e Roteiro de Produção
 
  | ITEM | QUANTIDADE PAI (EM LITROS) | QUANTIDADE FILHO |
  | --- | --- | --- |
- | Leite vaca in natura padrão | 10 | 100 litros |
- | Sal ref extra cisne 25kg ind(vermelho) | 10 | 1.000 g |
- | Cloreto de calcio | 10 | 300 ml |
- | Fermento dvs tcc 20 500u congelado | 10 | 1.000 ml |
- | Chy max extra bb 5 litros (coagulante) | 10 | 60 ml |
- | Pote ( prt 530 ) - leve | 10 | 20 un |
- | Pote vita 500g - minas frescal tradicional ( PRT 530 ) | 10 | 20 un |
- | Tampa vita 500g - minas frescal trad (imp) (st 125) (st 130) | 10 | 20 un |
- | Saco vita/eur 20 x 35 - minas frescal pote (bobina) (liso) | 10 | 20 un |
- | Saco vita/eur 20 x 35 - minas frescal pote (bobina) (liso) | 10 | 20 un |
- | Cx vita - nº 15 - 06 pt - 500g | 10 | 3 un |
- | Fita adesiva 12mmx120m branca (embalar queijo) - 50 microns | 10 | 3 metros |
+ | Tarugo de Poliuretano Alta Performance de 3 metros | 10 | 2.500 ml |
+ | Refugo Tarugo de Poliuretano  | 10 | 100 ml |
+ | Eixo de metal 3 metros | 10 | 2.700 ml |
+ | Refugo Eixo de metal 3 metros | 10 | 100 ml |
 
 </div> 
 
@@ -209,13 +201,9 @@ Resolvendo a Lista de Material e Roteiro de Produção
 
 |ROTEIRO DE PRODUÇÃO|TEMPO|
 |--|--|
-|Mistura Fermento Lácteo (DVS) | 30 minutos |
-|Mistura Cloreto de Calcio e Coagulação| 45 minutos |
-|Corte da Coalhada com a Lira| 10 minutos |
-|Mexedura| 20 minutos |
-|Salga| 10 minutos |
-|Formas de Minas Frescal | 60 minutos |
-|Embalagem| 15 minutos |
+|Corte | 30 minutos |
+|Torno | 45 minutos |
+|Montagem | 30 minutos |
 </div>
 
 </div>
@@ -497,12 +485,15 @@ Also, HTML elements are valid:
 
 
 ---
-clicks: 3
+clicks: 4
 mdc: true
 ---
 
 # <fluent-production-checkmark-24-regular/> Formulários WEB
 Resolvendo apontamentos de produção e de controle de qualidade
+
+
+<img v-click href="https://eme4.com.br" src="/sulbras/formulariowebMobile.png" class="absolute top-30 right-6 h-70% " />
 
 <img v-click href="https://eme4.com.br" src="/08_fila.png" class="absolute h-80% p2 drop-shadow-2xl" />
 
@@ -510,11 +501,8 @@ Resolvendo apontamentos de produção e de controle de qualidade
 
 <img v-click href="https://eme4.com.br" src="/08_detalhe.png" class="absolute top-35 left-75 h-70% border b-gray-1 shadow-2xl" />
 
-?? Incluir imagem de celular
-
-
 ---
-
+''
 # Estoques
 
 ---
@@ -553,10 +541,10 @@ drop-shadow-2xl" />
 
 # Documentação
 
-- [Documentação](https://docs.datainfo.inf.br/eme4-manufatura/)
+
+<img href="https://eme4.com.br" src="/sulbras/documentacao.png" class="absolute top-30 left-44 h-70% p2 drop-shadow-2xl" />
 
 ---
-preload: false
 layout: image
 image: ./EME4_FUNDO_FIM2.png
 ---
