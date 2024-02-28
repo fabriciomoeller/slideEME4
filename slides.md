@@ -46,8 +46,7 @@ O manufatura EME4 é composto por 4 módulos:
 - **<ic-baseline-engineering/> Engenharia de produtos** - Configuração de produtos e suas variantes 
 - **<fluent-production-24-regular/> Controle de produção** - Criação, controle e apontamento de ordens de produção
 - **<fluent-production-checkmark-24-regular/> Controle de Formulários** - Desenvolvimento específico para  o Controle da Manufatura e Qualidade
-- **<fluent-notebook-add-24-regular/> Custos** - Desenvolvimento específico para  o Controle da Manufatura e Qualidade
-
+- **<fluent-notebook-add-24-regular/> Custos** - Calculo do custo real do produto fabricado
 
 
 <!--
@@ -114,7 +113,8 @@ graph LR
 classDef prod fill:#B0B0B0,font-weight:bold
 B[Pedidos de Venda] --> B2{Planejamento
  das necessidade}
-B2 --> G[Venda]
+B2 -->F1[Estoque de 
+produtos acabado] --> G[Venda]
 B2 -->  D[Ordem de produção Planejada]-->E[Ordem de produção
  em execução] -->F[Estoque de produtos acabado]
 -->G1[Venda]
@@ -510,6 +510,12 @@ Resolvendo apontamentos de produção e de controle de qualidade
 
 <img v-click href="https://eme4.com.br" src="/08_detalhe.png" class="absolute top-35 left-75 h-70% border b-gray-1 shadow-2xl" />
 
+?? Incluir imagem de celular
+
+
+---
+
+# Estoques
 
 ---
 
@@ -543,6 +549,11 @@ drop-shadow-2xl" />
 drop-shadow-2xl" />
 
 
+---
+
+# Documentação
+
+- [Documentação](https://docs.datainfo.inf.br/eme4-manufatura/)
 
 ---
 preload: false
